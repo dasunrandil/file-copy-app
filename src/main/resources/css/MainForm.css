@@ -1,0 +1,18 @@
+*{
+    -fx-font-family: "Montserrat SemiBold";
+}
+
+#btnSelectFile,
+#btnSelectDirectory{
+    -fx-background-color: #00bbff;
+    -fx-text-fill: white;
+}
+
+#btnCopy{
+    -fx-background-color: #ffb700;
+}
+
+#lblTitle{
+    -fx-background-color: #b82abd;
+    -fx-text-fill: white;
+}
