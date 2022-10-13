@@ -15,14 +15,14 @@
          </font>
       </Label>
       <JFXButton fx:id="btnSelectFile" layoutX="52.0" layoutY="113.0" onAction="#btnSelectFileOnAction" prefHeight="26.0" prefWidth="147.0" text="SELECT FILE" />
-      <Label layoutX="219.0" layoutY="117.0" text="No file selected" />
+      <Label fx:id="lblFile" layoutX="219.0" layoutY="117.0" text="No file selected" />
       <Label layoutX="55.0" layoutY="166.0" text="Select the destination directory..." />
       <JFXButton fx:id="btnSelectDirectory" layoutX="52.0" layoutY="203.0" onAction="#btnSelectDirectoryOnAction" prefHeight="26.0" prefWidth="147.0" text="SELECT DIRECTORY" />
-      <Label layoutX="219.0" layoutY="207.0" text="No folder selected" />
+      <Label fx:id="lblFolder" layoutX="219.0" layoutY="207.0" text="No folder selected" />
       <Rectangle fx:id="pgbContainer" arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="18.0" layoutX="52.0" layoutY="284.0" stroke="BLACK" strokeType="INSIDE" width="508.0" />
       <Rectangle fx:id="gbBar" arcHeight="5.0" arcWidth="5.0" fill="#34ff21" height="18.0" layoutX="52.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" />
       <JFXButton fx:id="btnCopy" layoutX="261.0" layoutY="317.0" onAction="#btnCopyOnAction" prefHeight="32.0" prefWidth="78.0" text="COPY" />
-      <Label layoutX="55.0" layoutY="253.0" prefHeight="18.0" prefWidth="210.0" text="Progress: 0%" />
-      <Label alignment="CENTER_RIGHT" layoutX="311.0" layoutY="253.0" prefHeight="18.0" prefWidth="249.0" text="0/0 kb" textAlignment="JUSTIFY" />
+      <Label fx:id="lblProgress" layoutX="55.0" layoutY="253.0" prefHeight="18.0" prefWidth="210.0" text="Progress: 0%" />
+      <Label fx:id="lblSize" alignment="CENTER_RIGHT" layoutX="311.0" layoutY="253.0" prefHeight="18.0" prefWidth="249.0" text="0/0 Kb" textAlignment="JUSTIFY" />
    </children>
 </AnchorPane>
