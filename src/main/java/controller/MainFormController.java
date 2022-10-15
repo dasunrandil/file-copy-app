@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -21,7 +22,7 @@ public class MainFormController {
     public Label lblFile;
     public Label lblFolder;
     private File srcFile;
-    private File srcDir;
+    private File desDir;
 
 
     public void initialize(){
@@ -42,10 +43,23 @@ public class MainFormController {
             lblFile.setText("No file selected");
         }
 
-        btnCopy.setDisable(srcFile == null || srcDir == null);
+        btnCopy.setDisable(srcFile == null || desDir == null);
     }
 
     public void btnSelectDirectoryOnAction(ActionEvent actionEvent) {
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setInitialDirectory(new File(System.getProperty("user.home")));
+        directoryChooser.setTitle("Select a destination folder");
+
+        desDir = directoryChooser.showDialog(lblFile.getScene().getWindow());
+
+        if (desDir != null){
+            lblFolder.setText(desDir.getAbsolutePath());
+        }else{
+            lblFolder.setText("No folder selected");
+        }
+
+        btnCopy.setDisable(srcFile == null || desDir == null);
 
     }
 
